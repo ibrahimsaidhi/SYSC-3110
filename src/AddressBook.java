@@ -15,7 +15,7 @@ public class AddressBook {
         buddyCollection.remove(buddy);    }
 
     public static void main(String[] args) {
-        System.out.println("Address Book");
+        System.out.println("Address Book.");
     }
 
 }
