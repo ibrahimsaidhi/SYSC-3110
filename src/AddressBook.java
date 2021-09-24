@@ -18,6 +18,7 @@ public class AddressBook {
     public void addBuddy(BuddyInfo buddy){
         if (buddy != null){
             buddyCollection.add(buddy);
+            // adds a buddy
         }
     }
 
