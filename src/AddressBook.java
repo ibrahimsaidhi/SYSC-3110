@@ -16,11 +16,16 @@ public class AddressBook {
     }
 
     public void addBuddy(BuddyInfo buddy){
-        buddyCollection.add(buddy);
+        if (buddy != null){
+            buddyCollection.add(buddy);
+        }
     }
 
-    public void removeBuddy(BuddyInfo buddy){
-        buddyCollection.remove(buddy);
+    public BuddyInfo removeBuddy(int index){
+        if (index >= 0 && index < buddyCollection.size()) {
+            return buddyCollection.remove(index);
+        }
+        return null;
     }
 
 
@@ -29,8 +34,7 @@ public class AddressBook {
         BuddyInfo buddy = new BuddyInfo("Ibrahim", "123 Lala Land", "613");
         AddressBook addressBook = new AddressBook();
         addressBook.addBuddy(buddy);
-        System.out.println(addressBook.getBuddyCollection());
-        System.out.println("Address Book.");
+        addressBook.removeBuddy(0);
     }
 
 }
